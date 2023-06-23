@@ -12,7 +12,7 @@ int main() {
 
 
 
-    /****find the all divisor of the numbers from 1 to n.   1<n<10e6  
+    /****Find number of divisors of the numbers from 1 to n.   1<n<10e6  
      * TIME COMPLEXITY : O(N log log(N)) ****/
     int n=10000;
     for (int i = 1; i <=n; i++){
@@ -35,7 +35,7 @@ int main() {
     for(int i = 1; i<=n; i++){
         sd[i]=i;
     }
-    for(int i = 1; i<=n; i++){
+    for(int i = 2; i<=n; i++){
         for(int j = i; j<=n; j+=i){
             sd[j]=min(sd[j], i);
         }

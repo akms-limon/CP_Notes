@@ -34,7 +34,7 @@ int main() {
      ***********conclution : if(digit_sum%9==0) */
 
 
-    /**************** Divisible by 2 ****************
+    /**************** Divisible by 4 ****************
      * if the number is divisible by 2 for 2 times.*/
 
 
@@ -43,6 +43,7 @@ int main() {
 
 
     /**************** Divisible by 6 ****************
-     * if the number is divisible by 2 and 3.*/    
+     * if the number is divisible by 2 and 3.*/   
+    cout<<10%11<<endl; 
     return 0;
 }
