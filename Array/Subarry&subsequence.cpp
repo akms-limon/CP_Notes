@@ -1,10 +1,4 @@
 #include<bits/stdc++.h>
-#define ll long long
-#define yy cout<<"YES"<<endl
-#define nn cout<<"NO"<<endl
-#define nl "\n"
-#define fl(i,a,n) for(int i=a; i<n; i++)
-#define sp(n) fixed << setprecision(n)
 using namespace std;
 
 int main()
@@ -18,7 +12,7 @@ int main()
     কারন অর্ডার ঠিক আছে কিন্ত মাঝের একটি ইনডেক্স এর মান নাই। কিন্তু উভয় এর ক্ষেত্রে
     অবশ্যই ইনডেক্স গুলা অর্ডার মেইন্টেইন করবে । মানে আগের ইনডেক্স নাম্বার কখনো পরের 
     ইনডেক্স নাম্বার এর চেয়ে বড় হতে পারবে না । যেমন [১ ৪] সাব অ্যারে সাবসিকুয়েন্স একটাও নয় ।*/
-
+    
     //একটি অ্যারের সাব অ্যারের সংখ্যা nC2 সংখ্যক । সাব সিকুয়েন্স সংখ্যা 2^n ।
 
     return 0;

@@ -15,6 +15,7 @@ int main() {
     int n = 5; 
     cout<<(n^n)<<'\n'; // n ke even sonkhok bar n diye x-or korle 0 hobe. r odd sonkhok bar korle n hobe.
     cout<<(n^n^n)<<'\n';
+    // x^x=0, a^b = c^d hole a=c^d^b. 
     // if (x^y = 0) hoy tahole (x=y) hobe must.
     
     //problem1

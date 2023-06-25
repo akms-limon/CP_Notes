@@ -16,8 +16,8 @@ int main() {
                 n/=i;
             }
         }
-        if(n>1) v.push_back(n);
     }
+    if(n>1) v.push_back(n);
     for (int i = 0; i < v.size(); i++) {
         cout<<v[i]<<' ';
     }
