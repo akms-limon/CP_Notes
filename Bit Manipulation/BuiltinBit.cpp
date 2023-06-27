@@ -15,9 +15,9 @@ int main()
 
     // checking if this number is a power of 2. is  x == 2^n
     int x = 8;
-    if (__builtin_popcount(x) == 1)
+    if(__builtin_popcount(x) == 1)
         cout << "This number is a power of two." << '\n';
-    if (((x) & (x - 1)) == 0)
+    if(((x) & (x - 1)) == 0)
         cout << "This number is a power of two." << '\n';
     //if 2^k = n find the value of k
     n = 16;

@@ -9,7 +9,7 @@ int main(){
 
     //code with luv
     int x=4; 
-    int *p=&x; 
+    int *p=&x;
     cout<<"&x : "<<&x<<endl;
     cout<<"p : "<<p<<endl;
     cout<<"*p : "<<*p<<endl;
@@ -20,7 +20,7 @@ int main(){
     cout<<"&p : "<<&p<<endl;
     cout<<"pp : "<<pp<<endl;
     cout<<"*pp : "<<*pp<<endl;
-    cout<<"**pp : "<<*pp<<endl;
+    cout<<"**pp : "<<**pp<<endl;
     **pp=7;
     cout<<"x : "<<x<<endl;
 

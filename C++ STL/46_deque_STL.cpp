@@ -6,9 +6,6 @@ using namespace std;
 int main()
 {
     /*******Deque is realy a wow type STL is very beautifull to use*****/
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL), cout.tie(NULL);
-
     deque<int>dq;
     dq.push_back(2);
     dq.push_back(4);
@@ -16,14 +13,13 @@ int main()
     dq.pop_back();
     dq.pop_front();
     dq.push_front(7);
-    for(auto it: dq)
-    {
-        cout<<it<<" "<<endl;
-    }
+    for(auto it: dq) {
+        cout<<it<<" ";
+    } 
+    cout<<endl;
     sort(dq.begin(), dq.end());
     reverse(dq.rbegin(), dq.rend());
-    for (int i = 0; i < dq.size(); i++)
-    {
+    for (int i = 0; i < dq.size(); i++) {
         cout<<dq[i]<<' ';
     }
     cout<<endl;

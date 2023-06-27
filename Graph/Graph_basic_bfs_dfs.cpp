@@ -25,8 +25,8 @@ class DemoGraph{
             map<int, bool>visited;
             visited[start]=true;
             while(!q.empty()){
-                int front = q.front();
                 cout<<q.front()<<" ";
+                int front = q.front();
                 q.pop();
                 for(auto it : graph[front]){
                     if(visited[it]==false){
@@ -54,14 +54,11 @@ int main() {
     
     int n, a, b; cin>>n;
     DemoGraph g;
-    for (int i = 0; i < n; i++)
-    {
+    for (int i = 0; i < n; i++) {
         cin>>a>>b;
         g.intputGraph(a, b);
     }
-
     g.printgraph();
-    
     g.bfs(a);
     g.dfs(a);
     return 0;

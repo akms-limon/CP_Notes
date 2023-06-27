@@ -16,7 +16,8 @@ Do_not_copy_code
 
     //abs function. finding absulate value.
     int a=-10;
-    a=abs(a); cout<<"using the builtin function absulate value of a is : "<<a<<nl; nll
+    a=abs(a); 
+    cout<<abs(a);
 
     return 0;
 }

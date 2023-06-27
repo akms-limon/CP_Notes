@@ -1,19 +1,8 @@
 #include<bits/stdc++.h>
-#define ll long long
-#define yy cout<<"YES"<<'\n';
-#define nn cout<<"NO"<<'\n';
-#define nl '\n';
-#define nll cout<<'\n';
-#define fl(i,a,n) for(int i=a; i<n; i++)
-#define sp(n) fixed << setprecision(n)
-#define Do_not_copy_code ios_base::sync_with_stdio(NULL);cin.tie(NULL);
-
 using namespace std;
 
-int main()
-{
-Do_not_copy_code
-
+int main() {
+    
     int n; cin>>n; int ara[n+1];
     for (int i = 1; i<= n; i++)
     {
@@ -27,6 +16,6 @@ Do_not_copy_code
     }
     int l, m; cin>>l>>m;
     int sum=prifix_sum[m]-prifix_sum[l-1];
-    cout<<sum<<nl;
+    cout<<sum<<'\n';
     return 0;
 }

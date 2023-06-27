@@ -16,11 +16,9 @@ int main() {
     
     vector< pair<int, int> > v({{1, 3}, {1, 2}, {2, 5}, {1, 1}});
     sort(v.begin(), v.end(), cmp);
-    for(auto [x, y] : v){
-        cout<<x<<' '<<y<<'\n';
+    for(auto it : v){
+        cout<<it.first<<' '<<it.second<<'\n';
     }
-
-
     // assert function for check any thing
     int b = 2; 
     assert(b==2);

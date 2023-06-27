@@ -8,8 +8,8 @@ using namespace std;
 int main() {
     bitset<30>b(11);  // b = binary of 11 which length is 30
     cout<<b<<'\n'; 
-    cout<<b[3]<<'\n'; //we can access the index of bitset.
-    cout<<b.count()<<'\n'; //how many zero in bitset b
+    cout<<b[0]<<b[1]<<b[2]<<b[3]<<'\n'; //we can access the index of bitset.
+    cout<<b.count()<<'\n'; //how many one in bitset b
     bitset<30>c("10001110");
     cout<<c<<'\n';
     bitset<30>x(29), y("10101011");
