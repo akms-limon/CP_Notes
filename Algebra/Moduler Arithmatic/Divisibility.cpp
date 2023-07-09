@@ -44,6 +44,8 @@ int main() {
 
     /**************** Divisible by 6 ****************
      * if the number is divisible by 2 and 3.*/   
-    cout<<10%11<<endl; 
-    return 0;
+
+    /**************** Divisible by 11 ****************
+     *10%11=-1, and 10^2%11= -1*-1=1, 10^3%11 = -1, and so on..... by this concept 
+     4567%11 = 4*10^3%11+5*10^2%11+6*10%11+7%11 = (-4+5-6+7)%11=ans*/    
 }
