@@ -15,7 +15,7 @@ int main(){
  	}
  	vector<int, pair<int, string>>v;
   	for(auto it : m){
- 		v[it]=make_pair(it.first, it.second.first);
+ 		v[it].make_pair(it.first, it.second.first);
  	}
  	sort(v.begin(), v.end());
  	for(int i = 0; i<v.size(); i++){
