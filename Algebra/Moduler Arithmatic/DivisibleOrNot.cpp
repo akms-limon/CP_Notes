@@ -9,6 +9,7 @@ int main() {
     
     /*Given a big number as string length is 10^5, we have to check the number is divisible by 
     k or not  */
+    https://lightoj.com/problem/large-division
 
     string s; int k; 
     cin>>s>>k;

@@ -4,12 +4,13 @@
 **/
 #include <bits/stdc++.h>
 using namespace std;
-int mod = 1e9+7;
+#define ll long long
+ll mod = 1e9+7;
 
 //(e^n)%mod
-int BinExpoRecur(int e, int n){
+ll BinExpoRecur(ll e, ll n){
     if(n==0) return 1; 
-    int x = BinExpoRecur(e, n/2);
+    ll x = BinExpoRecur(e, n/2);
     if(n%2==0){
         return 1LL*x*x%mod;
     }
@@ -19,9 +20,9 @@ int BinExpoRecur(int e, int n){
 }
 
 // (a*n)%mod
-int bigMultiRecur(int a, int n){
+ll bigMultiRecur(ll a, ll n){
     if(n==1) return a%mod;
-    int x = bigMultiRecur(a, n/2);
+    ll x = bigMultiRecur(a, n/2);
     if(n%2==0){
         return (x+x)%mod;
     }
@@ -31,8 +32,8 @@ int bigMultiRecur(int a, int n){
 }
 
 // (a*n)%mod
-int binMulti(int a, int n){
-    int ans = 0;
+ll binMulti(ll a, ll n){
+    ll ans = 0;
     while(n){
         if(n&1){
             ans= (ans+a)%mod;
@@ -44,8 +45,8 @@ int binMulti(int a, int n){
 }
 
 // (e^n)%mod
-int binExpo(int e, int n){
-    int ans = 1; 
+ll binExpo(ll e, ll n){
+    ll ans = 1; 
     while(n){
         if(n&1) {
             ans = binMulti(ans, e);
@@ -57,15 +58,15 @@ int binExpo(int e, int n){
 }
 
 // (1/a)%mod
-int bininverse(int a, int mod){   
+ll bininverse(ll a, ll mod){   
     return binExpo(a, mod-2);
 }
 
 int main() {
-    int e = 3, n = 1000000000;
-    int ans = BinExpoRecur(e, n);
+    ll e = 3, n = 1000000000;
+    ll ans = BinExpoRecur(e, n);
     cout<<ans<<'\n';
-    int ans2 = binExpo(e, n);
+    ll ans2 = binExpo(e, n);
     auto st = clock();
     cerr<<1.0*(clock()-st)/CLOCKS_PER_SEC<<endl;
     return 0;
