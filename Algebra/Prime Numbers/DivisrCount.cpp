@@ -19,6 +19,7 @@ int main(){
         }
         if(n>1) v.push_back(n);
     }
+    
     map<int, int>mp;
     for (int i = 0; i < v.size(); i++) {
         mp[v[i]]++;

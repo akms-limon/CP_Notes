@@ -36,6 +36,7 @@ int main() {
         sd[i]=i;
     }
     for(int i = 2; i<=n; i++){
+        if(sd[i]==i)
         for(int j = i; j<=n; j+=i){
             sd[j]=min(sd[j], i);
         }
@@ -55,7 +56,7 @@ int main() {
     while(q--){
         int x; cin>>x;
         vector<int>ans;
-        while(n>1){
+        while(x>1){
             ans.push_back(sd[x]);
             x/=sd[x];
         }

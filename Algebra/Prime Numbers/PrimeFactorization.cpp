@@ -8,19 +8,20 @@ using namespace std;
 int main() {
     
     int n; cin>>n;
-    vector<int>v;
+    vector<pair<int,int>>primeFactors;
     for (int i = 2; i*i <= n; i++){
         if(n%i==0){
+            int cnt = 0;
             while(n%i==0){
-                v.push_back(i);
+                cnt++;
                 n/=i;
             }
+            primeFactors.push_back(make_pair(i,cnt));
         }
     }
-    if(n>1) v.push_back(n);
-    for (int i = 0; i < v.size(); i++) {
-        cout<<v[i]<<' ';
+    if(n>1) primeFactors.push_back(make_pair(n, 1));
+    for(auto it : primeFactors){
+        cout<<it.first<<'^'<<it.second<<'\n';
     }
-    cout<<'\n';
     return 0;
 }
