@@ -33,7 +33,8 @@ void Sieve()  //From masum vai : use this when N is big but other constrains is 
     {
         if(vis[i]) continue;
         v.push_back(i);
-        for(int j=i*3;j<N;j+=i*2)   vis[j]=true;
+        for(int j=i*3;j<N;j+=i*2)   
+        vis[j]=true;
     }
 }
 
