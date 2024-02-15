@@ -35,7 +35,7 @@ int main() {
 
 
     /**************** Divisible by 4 ****************
-     * if the number is divisible by 2 for 2 times.*/
+     * if the number is divisible by 2 for 2 times. or if the last 2digit is divisible by 4*/
 
 
     /**************** Divisible by 6 ****************
@@ -47,5 +47,5 @@ int main() {
 
     /**************** Divisible by 11 ****************
      *10%11=-1, and 10^2%11= -1*-1=1, 10^3%11 = -1, and so on..... by this concept 
-     4567%11 = 4*10^3%11+5*10^2%11+6*10%11+7%11 = (-4+5-6+7)%11=ans*/    
+     4567%11 = 4*10^3%11+5*10^2%11+6*10%11+7%11 = (-4+5-6+7)%11=ans*/ 
 }
