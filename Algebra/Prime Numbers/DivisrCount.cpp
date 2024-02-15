@@ -27,10 +27,10 @@ int main(){
     ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
 
     //একটা নাম্বারের মাক্সিমাম কিউবিক রুট টা ডিভিজর থাকতে পারে । ১০^১৮ এর ১০^৬ টা এবং ১০^৯ এর ১০^৩ টা ডিভিজর থাকতে পারে মাক্সিমাম ।
-    int n = 12;
+    int n = 5;
     cout << numberOfDivisors(n) << '\n';
 
-    /*Only square numbers divisor count is Odd because a * a = a^2  So, here the point 2 same 
+    /*Only square numbers divisor count is Odd because a * a = a^2  So, here the point 2 same
     divisors multiplication is = a ^ 2. So that here the divisors decrease by 1. So square numbers divisor
     count is ODD.*/
     return 0;
