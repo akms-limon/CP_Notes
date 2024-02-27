@@ -6,10 +6,13 @@
 using namespace std;
 
 int factorial(int n){
+    // at first I have to write the base case.
     if(n==0){
         return 1;
     }
-    return n*factorial(n-1);
+    
+    // then the function which solve the question
+    return n * factorial(n-1);
 }
 
 int main() {
