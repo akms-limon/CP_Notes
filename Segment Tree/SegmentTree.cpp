@@ -8,39 +8,39 @@ using namespace std;
 
 const int N = 1e5;
 ll a[N];
-ll t[4 * N];
+ll tree[4 * N];
 
-void build(int n, int b, int e){
+void build(int node, int b, int e){
     if(b == e){
-        t[n] = a[b];
+        tree[node] = a[b];
         return;
     }
-    int l = 2 * n, r = 2 * n + 1;
+    int l = 2 * node, r = 2 * node + 1;
     int mid = (b + e) / 2;
     build(l, b, mid), build(r, mid + 1, e);
-    t[n] = t[l] + t[r];
+    tree[node] = tree[l] + tree[r];  // change this
 }
 
-int query(int n, int b, int e, int i, int j){
-    if(b > j || e < i) return 0;
+int query(int node, int b, int e, int i, int j){
+    if(b > j || e < i) return 0;  // return appropriate value
     if(b >= i && e <= j){
-        return t[n];
+        return tree[node];
     }
-    int l = 2 * n, r = 2 * n + 1;
+    int l = 2 * node, r = 2 * node + 1;
     int mid = (b + e) / 2;
-    return query(l, b, mid, i, j) + query(r, mid + 1, e, i, j);
+    return query(l, b, mid, i, j) + query(r, mid + 1, e, i, j); // change this
 }
 
-void upd(int n, int b, int e, int i, int x){
+void upd(int node, int b, int e, int i, int x){
     if(b > i || e < i) return;
     if(b == e) {
-        t[n] = x;
+        tree[node] = x;  // update
         return;
     }
-    int l = 2 * n, r = 2 * n + 1;
+    int l = 2 * node, r = 2 * node + 1;
     int mid = (b + e) / 2;
     upd(l, b, mid, i, x), upd(r, mid + 1, e, i, x);
-    t[n] = t[l] + t[r];
+    tree[node] = tree[l] + tree[r];  // change this
 }
 
 int main() {

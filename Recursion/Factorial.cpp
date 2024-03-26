@@ -11,7 +11,7 @@ int factorial(int n){
         return 1;
     }
     
-    // then the function which solve the question
+    // then the function which solve the question     .......  n! = n * (n - 1)!
     return n * factorial(n-1);
 }
 

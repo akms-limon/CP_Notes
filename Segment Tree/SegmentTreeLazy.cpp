@@ -8,11 +8,11 @@ using namespace std;
 
 int const N = 1e5;
 ll a[N];
-ll tree[4*N];
-ll lazy[4*N];
+ll tree[4 * N];
+ll lazy[4 * N];
 
 void build(int node, int b, int e){
-    lazy[node]=0; //change this
+    lazy[node] = 0; //change this
     if (b == e){
         tree[node] = a[b];
         return;
@@ -22,7 +22,7 @@ void build(int node, int b, int e){
     build(l, b, mid), build(r, mid+1, e);
     tree[node] = tree[l] + tree[r];
 }
-
+ 
 void push(int node, int b, int e){
     if(lazy[node] == 0) return;
     tree[node] += lazy[node] * (e - b + 1);
@@ -39,7 +39,7 @@ void upd(int node, int b, int e, int i, int j, ll x){
     if(j < b || e < i) return;
     if(i <= b && e <= j){
         lazy[node] = x;  //set lazy
-        push(node, b, e);
+        push(node, b, e);    
         return;
     }
     int l = node * 2, r = node * 2 + 1;

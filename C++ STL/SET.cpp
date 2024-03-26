@@ -26,7 +26,6 @@ int main(){
         cout<<(*it)<<'\n';
         st.erase(it);
     }
-
     // unordered set = unique but not sorted
     //multiset = similler to set but not unique
 
