@@ -23,18 +23,17 @@ int main(){
     ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
 
     int n, m; cin >> n >> m;
-    int a[n];
-    int i = 0;
-    int num_of_components = 0;
+    vector<int> a;
     while (m--) {
         int u, v;
         cin >> u >> v;
-        a[i] = u, a[i + 1] = v;
-        i += 2;
+        a.push_back(u);
+        a.push_back(v);
         g[v].push_back(u);
-        g[v].push_back(v);
+        g[u].push_back(v);
     }
-    for (int j = 0; j < n; j++) {
+    int num_of_components = 0;
+    for (auto j : a) {
         if (!vis[a[j]]) {
             num_of_components++;
             dfs(a[j]);
