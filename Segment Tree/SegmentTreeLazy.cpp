@@ -8,53 +8,61 @@ using namespace std;
 
 int const N = 1e5;
 ll a[N];
-ll tree[4 * N];
+ll t[4 * N];
 ll lazy[4 * N];
 
-void build(int node, int b, int e){
-    lazy[node] = 0; //change this
-    if (b == e){
-        tree[node] = a[b];
+void build(int n, int b, int e) {
+    lazy[n] = 0;
+    if (b == e) {
+        t[n] = a[b];
         return;
     }
-    int l = node * 2, r = node * 2 + 1;
+    int l = n * 2, r = n * 2 + 1;
     int mid = (b + e) / 2;
-    build(l, b, mid), build(r, mid+1, e);
-    tree[node] = tree[l] + tree[r];
+    build(l, b, mid), build(r, mid + 1, e);
+    t[n] = t[l] + t[r];
 }
  
-void push(int node, int b, int e){
-    if(lazy[node] == 0) return;
-    tree[node] += lazy[node] * (e - b + 1);
-    if(b != e){
-        int l = node * 2, r = node * 2 + 1;
-        lazy[l] += lazy[node];
-        lazy[r] += lazy[node];
-    }
-    lazy[node] = 0;
-}
-
-void upd(int node, int b, int e, int i, int j, ll x){
-    push(node, b, e);
-    if(j < b || e < i) return;
-    if(i <= b && e <= j){
-        lazy[node] = x;  //set lazy
-        push(node, b, e);    
+void push(int n, int b, int e) {
+    if (lazy[n] == 0) {
         return;
     }
-    int l = node * 2, r = node * 2 + 1;
-    int mid = (b + e) / 2; 
-    upd(l, b, mid, i, j, x), upd(r, mid+1, e, i, j, x);
-    tree[node] = tree[l] + tree[r];
+    t[n] += lazy[n] * (e - b + 1);
+    if (b != e) {
+        int l = n * 2, r = n * 2 + 1;
+        lazy[l] += lazy[n];
+        lazy[r] += lazy[n];
+    }
+    lazy[n] = 0;
 }
 
-ll query(int node, int b, int e, int i, int j){
-    push(node, b, e);
-    if(i > e || b > j) return 0;
-    if(i <= b && e <= j) return tree[node];
-    int l = node * 2, r = node * 2 + 1;
+void upd(int n, int b, int e, int i, int j, ll x) {
+    push(n, b, e);
+    if (j < b || e < i) {
+        return;
+    }
+    if (i <= b && e <= j) {
+        lazy[n] = x;
+        push(n, b, e);
+        return;
+    }
+    int l = n * 2, r = n * 2 + 1;
     int mid = (b + e) / 2; 
-    return query(l, b, mid, i, j)+query(r, mid+1, e, i, j);
+    upd(l, b, mid, i, j, x), upd(r, mid + 1, e, i, j, x);
+    t[n] = t[l] + t[r];
+}
+
+ll query(int n, int b, int e, int i, int j) {
+    push (n, b, e);
+    if (i > e || b > j) {
+        return 0;
+    }
+    if (i <= b && e <= j) {
+        return t[n];
+    }
+    int l = n * 2, r = n * 2 + 1;
+    int mid = (b + e) / 2; 
+    return query(l, b, mid, i, j) + query(r, mid + 1, e, i, j);
 }
 
 int main() {
