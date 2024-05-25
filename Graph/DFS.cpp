@@ -23,17 +23,12 @@ int main(){
     ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
 
     int n, m; cin >> n >> m;
-    set<int> s;
-    int i = 0;
     while (m--) {
         int u, v;
         cin >> u >> v;
-        s.insert(u), s.insert(v);
-        i += 2;
         g[v].push_back(u);
         g[v].push_back(v);
     }
-    auto temp = s.begin();
-    dfs(*temp);
+    dfs(1);
     return 0;
 }
