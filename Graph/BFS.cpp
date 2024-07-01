@@ -14,18 +14,14 @@ int main(){
     ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
 
     int n, m; cin >> n >> m;
-    set<int> s;
     while (m--) {
         int u, v; cin >> u >> v;
-        s.insert(u);
-        s.insert(v);
         g[u].push_back(v);
         g[v].push_back(u);   
     }
     queue<int> q;
-    auto temp = s.begin();
-    q.push(*temp);
-    vis[*temp] = true;
+    q.push(1);
+    vis[1] = true;
     while (!q.empty()) {
         int u = q.front();
         q.pop();
