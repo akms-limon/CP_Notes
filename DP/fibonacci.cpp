@@ -16,12 +16,12 @@ int fibo(int n) {
     if (is_calculate[n]) return f[n];
     f[n] = fibo(n - 1) + fibo(n - 2);
     is_calculate[n] = true;
-
+    return f[n];
 }
 
 int main() {
     ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
 
-    cout << fibo(40) << '\n';
+    cout << fibo(3) << '\n';
     return 0;
 }

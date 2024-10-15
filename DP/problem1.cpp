@@ -38,3 +38,33 @@ int main() {
     min_steps(n);
     return 0;
 }
+
+
+
+// Iterative way to solve this problem
+ 
+// #include <bits/stdc++.h>
+// #define ll long long
+// using namespace std;
+
+// const int N = 1e5 + 9;
+// int step[N];
+
+// int main() {
+//     ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
+
+//     int n = ;
+//     step[1] = 0;
+//     for (int i = 2; i <= n; i++) {
+//         int ans = step[i - 1] + 1;
+//         if (i % 2 == 0) {
+//             ans = min(ans, step[i / 2] + 1);
+//         }
+//         if (i % 3 == 0) {
+//             ans = min(ans, step[i / 3] + 1);
+//         }
+//         step[i] = ans;
+//     }
+//     cout << step[n] << '\n';
+//     return 0;
+// }

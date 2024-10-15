@@ -5,8 +5,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main()
-{
+int main() {
     int n = 11;
     cout << __builtin_popcount(n) << '\n'; // count how many 1 in this numbers binary form....
     int a = 8;

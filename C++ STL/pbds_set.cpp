@@ -14,8 +14,10 @@ int main(){
     ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
 
     o_set <int> s;
-    s.insert(7);
     s.insert(6);
+    s.insert(6);
+    s.insert(7);
+    s.insert(8);
     s.insert(13);
     s.insert(10);
 
@@ -24,6 +26,8 @@ int main(){
 
     int x = s.order_of_key(8); // number of elements less than 3
     cout << x << '\n';
-    
+    for (auto it : s) {
+        cout << it << ' ';
+    }
     return 0;
 }

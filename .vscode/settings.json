@@ -1,7 +1,3 @@
 {
-    "files.associations": {
-        "cmath": "cpp",
-        "iostream": "cpp",
-        "bitset": "cpp"
-    }
+    "C_Cpp.default.compilerPath": "C:\\msys64\\ucrt64\\bin\\gcc.exe"
 }
