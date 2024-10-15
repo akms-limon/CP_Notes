@@ -29,9 +29,9 @@ int main(){
             spf[j]=min(spf[j], i);
         }
     }
-    // for(int i = 1; i<=10; i++){
-    //     cout<<spf[i]<<' ';
-    // }
-    // cout<<'\n';
+    for(int i = 1; i<=10; i++){
+        cout<<spf[i]<<' ';
+    }
+    cout<<'\n';
     return 0;
 }

@@ -9,6 +9,7 @@ int main() {
 
 
     /*****This is one of the Best way to take input sentence and output word by word******/
+    cin.ignore(); // getline use korle must use korte hobe.
     string s; 
     getline(cin, s);   //getline er age akta integer input nile cin.ignore(); use korte hoy. see 51 no code.
     cout<<s<<endl;
