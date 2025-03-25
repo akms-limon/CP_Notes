@@ -5,23 +5,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-const int n = 100000; 
-bitset<n+1>sieve;
-vector<int>primes;
-
-void bitsetSeive(){ //use this when N is big but other constrains is small
-    sieve.set();
-    sieve[0]=sieve[1]=0;
-    for(int i = 2; i*i<=n; i++){
-        if(sieve[i]){
-            primes.push_back(i);
-            for(int j=i*i; j<=n; j+=i){
-                sieve[j]=0;
-            }
-        }
-    }
-}
-
+const int n = 10000000;
 vector <int> v;
 bool vis[n];
 
