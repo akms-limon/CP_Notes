@@ -5,9 +5,9 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-const int n = 10000000;
+const int N = 10000000;
 vector <int> v;
-bool vis[n];
+bool vis[N];
 
 void Sieve()  //From masum vai : use this when N is big but other constrains is small 
 {
