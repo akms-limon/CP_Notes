@@ -16,7 +16,7 @@ void bitsetSeive(){ //use this when N is big but other constrains is small
         if(sieve[i]){
             primes.push_back(i);
             for(int j=i*i; j<=n; j+=i){
-                sieve[i]=0;
+                sieve[j]=0;
             }
         }
     }
