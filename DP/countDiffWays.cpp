@@ -14,16 +14,15 @@ ll count(ll i) {
 	if (i == 1) return 1;
 	if (i == 2) return 1;
 	if (ways[i] != -1) return ways[i];
-	ways[i] = (count(i - 1) % mod + count(i - 3) % mod) % mod;
-	return ways[i];
+	return ways[i] = (count(i - 1) % mod + count(i - 3) % mod) % mod;
 }
 
 int main() {
-    ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
+	ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
 
-    memset(ways, -1, sizeof ways);
-    cout << count(6636) << '\n';
-    return 0;
+	memset(ways, -1, sizeof ways);
+	cout << count(6636) << '\n';
+	return 0;
 }
 
 

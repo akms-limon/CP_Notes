@@ -47,7 +47,7 @@ int main() {
     * mid = 7
     * if condition is true, low = 7
     * else, high = 6
-    * 
+    *
     * so, mid = (low + high + 1) / 2  --> correct
     * mid = 8
     * if codition is true, low = 8

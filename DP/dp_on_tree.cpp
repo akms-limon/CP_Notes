@@ -20,18 +20,17 @@ void dfs(int u, int p) {
 }
 
 int main() {
-    ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
+	ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
 
-    int n; cin >> n;
-    for (int i = 1; i < n; i++) {
-    	int u, v; cin >> u >> v;
-    	g[u].push_back(v);
-    	g[v].push_back(u);
-    }
-    dfs(1, 0);
-    for (int i = 1; i <= n; i++) {
-    	cout << sz[i] << ' ';
-    }
-    cout << '\n';
-    return 0;
+	int n; cin >> n;
+	for (int i = 1; i < n; i++) {
+		int u, v; cin >> u >> v;
+		g[u].push_back(v);
+	}
+	dfs(1, 0);
+	for (int i = 1; i <= n; i++) {
+		cout << sz[i] << ' ';
+	}
+	cout << '\n';
+	return 0;
 }

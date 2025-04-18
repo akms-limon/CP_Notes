@@ -18,8 +18,7 @@ ll count(int n) {
 		ans += count(n - i);
 		ans %= mod;
 	}
-	ways[n] = ans;
-	return ans;
+	return ways[n] = ans;
 }
 
 int main() {

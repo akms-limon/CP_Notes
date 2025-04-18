@@ -42,7 +42,7 @@ int main() {
 
 
 // Iterative way to solve this problem
- 
+
 // #include <bits/stdc++.h>
 // #define ll long long
 // using namespace std;
@@ -53,7 +53,7 @@ int main() {
 // int main() {
 //     ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
 
-//     int n = ;
+//     int n = 100000;
 //     step[1] = 0;
 //     for (int i = 2; i <= n; i++) {
 //         int ans = step[i - 1] + 1;
