@@ -11,7 +11,7 @@ vector<int> g[N];
 bool vis[N];
 
 void dfs(int u) {
-    vis[u] = true; 
+    vis[u] = true;
     for (auto it : g[u]) {
         if (!vis[it]) {
             dfs(it);

@@ -1,0 +1,1 @@
+{"name":"Local: cyclefinding","url":"/home/akmslimon/Desktop/Programming/CP_Notes/Graph/cyclefinding.cpp","tests":[{"id":1746275137676,"input":"4 4\n2 4\n3 1\n4 1\n2 3\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/akmslimon/Desktop/Programming/CP_Notes/Graph/cyclefinding.cpp","group":"local","local":true}

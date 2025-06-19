@@ -26,7 +26,7 @@ int main(){
         s.insert(u);
         s.insert(v);
         g[u].push_back(v);
-        g[v].push_back(u);   
+        g[v].push_back(u);
     }
     queue<int> q;
     auto source = s.begin();
