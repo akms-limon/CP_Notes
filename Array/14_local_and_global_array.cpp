@@ -16,6 +16,7 @@ int main()
         cout<<"1st array "<<i+1<<"th element : "<<ara[i]<<endl;
         cout<<"2nd array "<<i+1<<"th element : "<<ara1[i]<<endl;
     }
+    // this is a test for github contribution hitmap
     
     
     return 0;
