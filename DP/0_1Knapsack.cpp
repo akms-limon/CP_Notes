@@ -13,8 +13,7 @@ int recur(int i, int weight) {
 	if (dp[i][weight] != -1) return dp[i][weight];
 	int ans = recur(i + 1, weight);
 	if (w[i] + weight <= W) ans = max(ans, recur(i + 1, weight + w[i]) + v[i]);
-	dp[i][weight] = ans;
-	return ans;
+	return dp[i][weight] = ans;
 }
 
 int32_t main() {

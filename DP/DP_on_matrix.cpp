@@ -20,8 +20,8 @@ int min_cost(int i, int j) {
 void path(int i, int j) {
     cout << '(' << i << ',' << j << ')' << "-> ";
     if (i == n - 1 and j == m - 1) return;
-    int right = min_cost(i, j + 1);
-    int down = min_cost(i + 1, j);
+    int right = min_cost(i, j + 1);  //I can use dp[i][j + 1] here, without recomputing
+    int down = min_cost(i + 1, j); //I can use dp[i + 1][j] here, without recomputing
     if (right <= down) {
         path(i, j + 1);
     }
